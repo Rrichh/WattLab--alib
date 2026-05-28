@@ -17770,7 +17770,7 @@ function reAuthStrava(){
   localStorage.setItem('stravaClientId',     clientId);
   localStorage.setItem('stravaClientSecret', clientSecret);
   localStorage.setItem('stravaTokenExpires', '0'); // force refresh on next load
-  const redirect = 'https://rrichh.github.io/wattlab/';
+  const redirect = 'https://rrichh.github.io/WattLab--alib/';
   const url = `https://www.strava.com/oauth/authorize?client_id=${encodeURIComponent(clientId)}&redirect_uri=${encodeURIComponent(redirect)}&response_type=code&scope=activity:read_all&state=wattlab&approval_prompt=force`;
   window.location.href = url;
 }
