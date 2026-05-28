@@ -17437,9 +17437,9 @@ function applyFITData(fitLaps, fitRecords, fitSession){
    STRAVA INTEGRATION — OAuth PKCE + Activity Streams
 ══════════════════════════════════════════════════════ */
 // ⚠️ Replace with your own Strava Client ID from https://www.strava.com/settings/api
-const STRAVA_CLIENT_ID     = '212163';
-const STRAVA_CLIENT_SECRET = 'ec7a553c236461496ca7d39d9fc81edf32d35b3d';
-const STRAVA_REDIRECT      = 'https://rrichh.github.io/wattlab/';
+const STRAVA_CLIENT_ID     = '212700';
+const STRAVA_CLIENT_SECRET = '8ea8fdd52ee20873e29e89fb67c8d2c008d2799f';
+const STRAVA_REDIRECT      = 'https://rrichh.github.io/WattLab--alib/';
 const STRAVA_SCOPE         = 'activity:read_all';
 // ⚡ Google Apps Script sync — URL del tuo web app (script.google.com → Pubblica)
 let GAS_URL       = localStorage.getItem('gasUrl') || '';
@@ -17770,7 +17770,7 @@ function reAuthStrava(){
   localStorage.setItem('stravaClientId',     clientId);
   localStorage.setItem('stravaClientSecret', clientSecret);
   localStorage.setItem('stravaTokenExpires', '0'); // force refresh on next load
-  const redirect = 'https://rrichh.github.io/wattlab/';
+  const redirect = 'https://rrichh.github.io/WattLab--alib/';
   const url = `https://www.strava.com/oauth/authorize?client_id=${encodeURIComponent(clientId)}&redirect_uri=${encodeURIComponent(redirect)}&response_type=code&scope=activity:read_all&state=wattlab&approval_prompt=force`;
   window.location.href = url;
 }
